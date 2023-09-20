@@ -83,7 +83,7 @@ document.addEventListener("click", (event) => {
         const messageClient = document.getElementById('chat-widget__input')
 
         messageClient.addEventListener("keyup", (event) => {
-            if (event.key === 'Enter' && messageClient.value) {
+            if (event.key === 'Enter' && messageClient.value.trim()) {
                 messages.innerHTML += getMessage(messages, messageClient.value, true)
                 messageClient.value = ''
                 messages.innerHTML += getMessage(messages, getAnswer(), false)
